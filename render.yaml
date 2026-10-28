@@ -1,0 +1,34 @@
+# Render blueprint for nexuscadsystems
+# DO NOT deploy from this file alone: Render needs a Git repository.
+# Push this folder to GitHub first, then create a Blueprint from that repo.
+# See DEPLOYMENT_CHECKLIST.md.
+services:
+  - type: web
+    name: nexuscadsystems
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nexus-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      # Real Stripe keys go here ONLY after the owner connects Stripe.
+      # Leave them empty / unset until then. Never commit real keys.
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_PUBLISHABLE_KEY
+        sync: false
+      - key: STRIPE_MODE
+        value: test
+    healthCheckPath: /health
+databases:
+  - name: nexus-db
+    plan: free
+    databaseName: nexus
+    user: nexus
