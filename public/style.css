@@ -1,0 +1,17 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1115;color:#e8e8e8}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#141821;border-bottom:1px solid #2a2f3a}
+header a{color:#9fc2ff;margin-left:14px;text-decoration:none}.brand{font-weight:800}
+main{max-width:1000px;margin:0 auto;padding:20px}footer{padding:20px;text-align:center;color:#888;font-size:13px}
+.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('/sunset.jpg') center/cover;padding:48px 24px;border-radius:12px}
+.hero h1{font-size:42px;margin:0 0 12px}.btn{display:inline-block;background:#ff7a2f;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;font-weight:700}
+.btn.secondary{background:#2a3448}.card{background:#1a1f2b;border:1px solid #2a2f3a;border-radius:12px;padding:18px;margin:18px 0}
+.card h2{margin-top:0}.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.plan{background:#222936;padding:16px;border-radius:10px}
+.price{font-size:26px;font-weight:800}label{display:block;margin:10px 0}input,select{width:100%;padding:9px;border-radius:6px;border:1px solid #333;background:#10141c;color:#eee;margin-top:4px}
+table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #2a2f3a;padding:6px;text-align:left}
+.server-nav{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.server-nav a{color:#9fc2ff}
+.banner{background:#7a2e00;padding:10px 14px;border-radius:8px;font-weight:700;margin-bottom:12px}
+.gta{background:linear-gradient(90deg,#ff512f,#dd2476);border-radius:12px;padding:20px;margin:24px 0;text-align:center}
+.gta-title{font-size:24px;font-weight:900}.count{font-size:28px;font-weight:900;margin:10px 0}
+.mapwrap{position:relative;max-width:700px}.mapwrap img{width:100%;border-radius:10px;display:block}
+.pin{position:absolute;transform:translate(-50%,-100%);font-size:22px}.small{color:#aaa;font-size:13px}.nav-note{color:#aaa}
+@media(max-width:600px){.hero h1{font-size:30px}.count{font-size:22px}}
